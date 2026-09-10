@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Borough Private Capital provides fast, flexible private real-estate financing for brokers and sponsors in New York, Northern New Jersey, and Atlanta.">
+  <title>Borough Private Capital | Private Real Estate Lending</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#10241f;--muted:#63716d;--paper:#f5f5ef;--line:#d8dfd8;--forest:#173d31;--lime:#d6f05f;--white:#fff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Manrope,system-ui,sans-serif;line-height:1.5}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 44px));margin:0 auto}.mono{font:500 11px/1.3 "DM Mono",monospace;letter-spacing:.13em;text-transform:uppercase}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:-.03em}.mark{width:28px;height:28px;background:var(--lime);display:grid;place-items:center;color:var(--forest);font-size:14px;border-radius:50%}.links{display:flex;gap:28px;align-items:center;font-size:13px;font-weight:600}.links a:not(.button){color:#53625d}.button{background:var(--forest);color:#fff;padding:13px 18px;border-radius:3px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;transition:transform .2s,background .2s}.button:hover{transform:translateY(-2px);background:#245646}.button.light{background:var(--lime);color:var(--forest)}
+    .hero{padding:76px 0 86px;display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}.eyebrow{color:#52655f;margin:0 0 22px}.hero h1{font-size:clamp(42px,6vw,77px);line-height:1.01;letter-spacing:-.07em;margin:0 0 27px;max-width:700px}.hero h1 em{font-style:normal;color:#6e8b24}.hero p.lead{font-size:18px;color:#596b65;max-width:530px;margin:0 0 32px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.text-link{padding:12px 8px;font-size:13px;font-weight:700;color:#4a625b}.visual{position:relative;min-height:480px}.visual img{width:100%;height:480px;display:block;object-fit:cover;filter:saturate(.68) contrast(1.05);border-radius:3px}.visual:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(11,44,35,.3),transparent 60%);border-radius:3px}.stamp{position:absolute;z-index:1;left:-28px;bottom:28px;width:180px;padding:20px;background:var(--lime);color:var(--forest);font-weight:800;font-size:19px;line-height:1.12;box-shadow:12px 12px 0 rgba(16,36,31,.12)}.stamp small{display:block;margin-top:12px;font:500 10px "DM Mono",monospace;text-transform:uppercase;letter-spacing:.08em}
+    .ticker{background:var(--forest);color:#dbe5dc;padding:17px 0}.ticker .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.ticker span{font:400 11px "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase}
+    section{padding:94px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}.section-head h2{font-size:clamp(30px,4vw,49px);letter-spacing:-.06em;line-height:1.05;margin:0;max-width:560px}.section-head p{color:var(--muted);max-width:300px;font-size:14px;margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:#fff;border:1px solid var(--line);padding:28px;min-height:250px}.card .num{color:#8ca42d;margin-bottom:38px}.card h3{font-size:20px;margin:0 0 10px;letter-spacing:-.04em}.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.65}
+    .band{background:#e6ebe2}.markets{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}.market-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}.market{background:var(--forest);color:#fff;padding:20px 18px;min-height:116px}.market strong{display:block;font-size:20px;letter-spacing:-.03em;margin-bottom:7px}.market span{color:#c0cdc6;font-size:12px}.note{padding-top:4px}.note h3{font-size:24px;letter-spacing:-.05em;margin:0 0 14px}.note p{color:var(--muted);font-size:15px;max-width:410px}
+    .process{background:var(--forest);color:#fff}.process .section-head p{color:#bbccc3}.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#426154}.step{padding:30px;background:var(--forest);min-height:190px}.step .num{color:var(--lime);margin-bottom:26px}.step h3{font-size:19px;margin:0 0 8px;letter-spacing:-.03em}.step p{color:#bbccc3;font-size:13px;margin:0;max-width:250px}
+    .contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}.contact h2{font-size:clamp(34px,4.7vw,58px);letter-spacing:-.07em;line-height:1.02;margin:0 0 18px}.contact p{color:var(--muted);font-size:15px;max-width:350px}.form{background:#fff;border:1px solid var(--line);padding:30px}.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{margin-bottom:15px}.field label{display:block;font:500 10px "DM Mono",monospace;text-transform:uppercase;letter-spacing:.1em;color:#62736d;margin:0 0 7px}.field input,.field select,.field textarea{width:100%;border:1px solid #d4ddd5;background:#fbfcf9;padding:12px 13px;font:500 13px Manrope;color:var(--ink);border-radius:2px}.field textarea{min-height:92px;resize:vertical}.form button{border:0;cursor:pointer;width:100%;margin-top:4px}.success{display:none;color:#45631d;background:#eff8c9;border:1px solid #d6e89b;padding:13px;margin-top:14px;font-size:13px}.fine{font-size:11px!important;line-height:1.5;color:#82908b!important;margin-top:15px!important}
+    footer{border-top:1px solid var(--line);padding:28px 0 34px;color:#778680;font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:20px}.footer-row a{color:#486058}
+    @media(max-width:800px){.links a:not(.button){display:none}.hero{grid-template-columns:1fr;gap:45px;padding-top:54px}.visual,.visual img{min-height:360px;height:360px}.stamp{left:14px;bottom:18px}.section-head{display:block}.section-head p{margin-top:16px}.cards,.process-grid{grid-template-columns:1fr}.markets,.contact{grid-template-columns:1fr;gap:38px}.market-list{grid-template-columns:1fr 1fr}.contact{padding-top:70px}.row{grid-template-columns:1fr}.footer-row{display:block}.footer-row span{display:block;margin-bottom:8px}}
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="brand" href="#"><span class="mark">B</span><span>Borough Private Capital</span></a>
+    <nav class="links"><a href="#approach">Approach</a><a href="#markets">Markets</a><a href="#process">Process</a><a class="button" href="#contact">Submit a deal ↗</a></nav>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <div>
+        <p class="mono eyebrow">Private capital / built for momentum</p>
+        <h1>Good deals move fast. <em>Your capital should too.</em></h1>
+        <p class="lead">Bridge, rehab, and ground-up financing for real estate brokers and sponsors who need a clear answer and an executable close.</p>
+        <div class="hero-actions"><a class="button" href="#contact">Start a conversation ↗</a><a class="text-link" href="#approach">See our approach ↓</a></div>
+      </div>
+      <div class="visual"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85" alt="Glass office tower in a city skyline"><div class="stamp">Clear terms.<br>Quick conviction.<small>NYC · NJ · ATL</small></div></div>
+    </section>
+
+    <div class="ticker"><div class="wrap"><span>Senior secured</span><span>Broker-first</span><span>New York · New Jersey · Atlanta</span><span>Responsive capital</span></div></div>
+
+    <section id="approach" class="wrap">
+      <div class="section-head"><h2>Financing that keeps the deal moving.</h2><p>Our mandate is simple: understand the asset, price the risk, and give you a straight path to closing.</p></div>
+      <div class="cards">
+        <article class="card"><p class="mono num">01 / bridge</p><h3>Bridge loans</h3><p>Fast, senior-secured capital for acquisitions, refinances, and time-sensitive transitions.</p></article>
+        <article class="card"><p class="mono num">02 / value-add</p><h3>Rehab &amp; reposition</h3><p>Flexible proceeds for improvements that unlock a property's next chapter and next valuation.</p></article>
+        <article class="card"><p class="mono num">03 / construction</p><h3>Ground-up capital</h3><p>Construction financing for sponsors with a clear plan, strong basis, and executable business plan.</p></article>
+      </div>
+    </section>
+
+    <section id="markets" class="band">
+      <div class="wrap markets">
+        <div class="note"><p class="mono eyebrow">Where we lend</p><h2>Local context.<br>Regional reach.</h2><p>We focus on the neighborhoods we know best, working alongside brokers who value certainty and discretion.</p></div>
+        <div class="market-list"><div class="market"><strong>New York</strong><span>All five boroughs</span></div><div class="market"><strong>North Jersey</strong><span>Closer to the city</span></div><div class="market"><strong>Atlanta</strong><span>Metro Atlanta &amp; infill</span></div><div class="market"><strong>Selective</strong><span>Special situations</span></div></div>
+      </div>
+    </section>
+
+    <section id="process" class="process">
+      <div class="wrap"><div class="section-head"><h2>A process built for brokers.</h2><p>Bring us the opportunity early. We make the next step obvious.</p></div><div class="process-grid"><div class="step"><p class="mono num">01 / share</p><h3>Send the snapshot</h3><p>Asset, basis, business plan, and your target timing.</p></div><div class="step"><p class="mono num">02 / align</p><h3>Get a direct read</h3><p>We ask the right questions and return a clear initial view.</p></div><div class="step"><p class="mono num">03 / execute</p><h3>Move toward close</h3><p>Once aligned, our team drives diligence and documentation forward.</p></div></div></div>
+    </section>
+
+    <section id="contact" class="wrap contact">
+      <div><p class="mono eyebrow">Start a conversation</p><h2>Have a deal<br>worth moving?</h2><p>Tell us enough to start the right conversation. A member of our team will follow up directly.</p></div>
+      <form class="form" id="inquiry-form"><div class="row"><div class="field"><label for="name">Your name</label><input id="name" name="name" required placeholder="Alex Morgan"></div><div class="field"><label for="company">Company</label><input id="company" name="company" required placeholder="Morgan Realty"></div></div><div class="row"><div class="field"><label for="email">Work email</label><input id="email" type="email" name="email" required placeholder="alex@company.com"></div><div class="field"><label for="phone">Phone (optional)</label><input id="phone" name="phone" placeholder="(212) 555-0100"></div></div><div class="row"><div class="field"><label for="market">Market</label><select id="market" name="market"><option>New York</option><option>North Jersey</option><option>Atlanta</option><option>Other</option></select></div><div class="field"><label for="loan">Loan type</label><select id="loan" name="loan"><option>Bridge</option><option>Rehab / value-add</option><option>Ground-up construction</option><option>Other</option></select></div></div><div class="field"><label for="details">Deal snapshot</label><textarea id="details" name="details" required placeholder="Property type, location, purchase price, requested loan amount, and timing"></textarea></div><button class="button" type="submit">Send inquiry ↗</button><div class="success" id="success">Thanks — your inquiry is ready for a Borough team member to review.</div><p class="fine">This form is a front-end preview. Connect it to your CRM or email endpoint before launch. Financing is subject to underwriting, documentation, and final approval.</p></form>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-row"><span>© 2026 Borough Private Capital</span><span>Private real estate lending for the markets we know.</span><a href="#contact">Submit a deal ↗</a></div></footer>
+  <script>document.getElementById('inquiry-form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('success').style.display='block';this.querySelector('button').textContent='Inquiry received ✓';this.querySelector('button').disabled=true;});</script>
+</body>
+</html>
+
