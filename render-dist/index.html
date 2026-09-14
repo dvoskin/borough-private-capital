@@ -30,13 +30,13 @@ document.querySelectorAll("[data-service]").forEach(function(link){link.addEvent
 syncService();
 if(intent==="management"||intent==="property-management"||intent==="property_management"){
  service.value="Property Management";
- heroKicker.textContent="Property Management · New York City & Northern New Jersey";
+ heroKicker.innerHTML='Property Management<span class="kicker-extra"> · New York City &amp; Northern New Jersey</span>';
  heroTitle.innerHTML="Your Building, Managed With <em>Clear Accountability.</em>";
  heroDescription.textContent="Property management for multifamily, mixed use, and commercial buildings, covering tenant operations, maintenance, financial reporting, and compliance coordination.";
  syncService();
 }else if(intent==="lending"||intent==="financing"||intent==="private-lending"||intent==="private_lending"){
  service.value="Private Lending";
- heroKicker.textContent="Private Real Estate Financing · New York, New Jersey & Atlanta";
+ heroKicker.innerHTML='Private Real Estate Financing<span class="kicker-extra"> · New York, New Jersey &amp; Atlanta</span>';
  heroTitle.innerHTML="A Direct Path From Property <em>to Financing.</em>";
  heroDescription.textContent="Business purpose bridge, fix and flip, and rental property financing for real estate brokers, sponsors, and investors.";
  syncService();
