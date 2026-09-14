@@ -37,7 +37,8 @@ h3{font:600 var(--fs-heading)/1.3 var(--font-sans);letter-spacing:-.01em;color:v
 h1 em{font-style:italic;color:var(--accent)}
 p,li{text-wrap:pretty}
 .kicker{display:block;margin-bottom:var(--s2);font:600 var(--fs-label)/1.4 var(--font-sans);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
-@media(max-width:599px){.kicker-extra{display:none}}
+.note-short{display:none}
+@media(max-width:599px){.kicker-extra,.note-full{display:none}.note-short{display:inline}}
 .lede{font-size:var(--fs-lede);line-height:1.5;color:var(--muted);max-width:56ch}
 .muted{color:var(--muted)}
 .small{font-size:var(--fs-small);line-height:1.5}
