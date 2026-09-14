@@ -9,3 +9,10 @@ Render settings:
 - Automatic deploys: enabled on `main`
 
 The page includes paid-acquisition SEO metadata, structured data, broker-focused copy, and a lead inquiry form. The form is prepared to post to the existing Cloudflare D1 intake endpoint used by the private Sites deployment. Confirm the backend CORS allowlist and run a test submission before sending paid traffic; update the endpoint/origin allowlist if you attach a custom domain.
+
+## Design system
+
+- All styling lives in `render-dist/assets/site.css`. Tokens at the top define color, the type scale, spacing, and radius. Pages link that one file; do not add page-level `<style>` blocks. (Measured 09-14: linking it instead of inlining changes Lighthouse mobile by 0 points.)
+- Type: system UI sans for body copy, labels, and controls; Georgia for `h1`/`h2` only. Font sizes come only from the scale tokens: display, title, heading, lede, body, small, label.
+- Components: `.nav` (full-width sticky header; `.menu` sheet below 1024px), `.hero` + `.media`, `.facts`, `.paths`, `.card` + `.num`, `.checks`, `.accordion`, `.note`, `.callout`, `.cta`, `.form` / `.fields` / `.field`, `.footer`, and `.mobile-cta` (hidden while an element marked `data-cta-end` is on screen).
+- Hero images keep `fetchpriority="high"` and must not use `loading="lazy"` or `decoding="async"`. With `decoding="async"`, Chromium left the hero image unpainted inside `.media` until something forced a repaint.
