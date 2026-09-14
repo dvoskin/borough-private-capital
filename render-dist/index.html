@@ -54,6 +54,16 @@ footer{padding-block:40px}.footer-top{display:flex;align-items:center;justify-co
  body:has(#property-form input:focus,#property-form select:focus,#property-form textarea:focus) .mobile-cta{display:none}
 }
 @media(max-width:360px){:root{--gutter:16px}.hero h1{font-size:2.15rem}.brand{gap:8px}.mark{padding-right:8px}.brand-name{font-size:.8125rem}}
+
+/* Modern interaction layer */
+.nav{position:sticky;top:0;z-index:30;transition:box-shadow .22s ease,background .22s ease;padding-left:0;padding-right:0}.nav.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(16px);box-shadow:0 10px 30px rgba(24,45,48,.08)}
+.btn{transition:background .2s ease,color .2s ease,box-shadow .2s ease,transform .2s ease}.btn.secondary{transition:background .2s ease,color .2s ease,box-shadow .2s ease,transform .2s ease}
+.hero figure{overflow:hidden}.hero img{transform:scale(1.035) translate(var(--px,0),var(--py,0));transition:transform .55s cubic-bezier(.2,.7,.2,1),filter .35s ease}.hero figure:hover img{filter:saturate(.55) contrast(1.04)}
+.asset,.program,.coverage,.process li{transition:transform .25s ease,border-color .25s ease}.trust-section{position:relative;overflow:hidden}.trust-section::before{content:"";position:absolute;inset:0;background:radial-gradient(560px circle at var(--spot-x,70%) var(--spot-y,28%),rgba(159,195,187,.14),transparent 64%);pointer-events:none}.trust-section>.wrap{position:relative}
+.service-link{transition:background .2s ease,padding .2s ease}.credential-slot{transition:transform .22s ease,border-color .22s ease,background .22s ease}
+@supports(interpolate-size:allow-keywords){:root{interpolate-size:allow-keywords}.accordion-panel{height:0;overflow:hidden;opacity:0;transition:height .26s ease,opacity .2s ease}.service-list details[open] .accordion-panel,.faq details[open] .accordion-panel{height:auto;opacity:1}}
+@media(hover:hover){.btn:hover{background:white;color:var(--ink);box-shadow:5px 5px 0 var(--ink);transform:translate(-3px,-3px)}.btn.secondary:hover{background:var(--ink);color:white;box-shadow:5px 5px 0 #8da6a2;transform:translate(-3px,-3px)}.asset:hover,.program:hover,.coverage:hover,.process li:hover{transform:translateY(-5px);border-color:var(--accent)}.service-link:hover{background:var(--surface);padding-left:16px;padding-right:16px}.credential-slot:hover{transform:translateY(-4px);background:rgba(255,255,255,.03);border-color:#a8bdb8}}
+@media(max-width:760px){.nav{position:relative}.nav.scrolled{box-shadow:none}.service-link:hover{padding-left:0;padding-right:0}.hero img{transform:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 @media print{body{padding-bottom:0}.nav,.actions,.service-nav,#contact,.mobile-cta,footer nav{display:none}.wrap{width:100%}.section{padding-block:24px}.hero{display:block}.hero figure{display:none}.trust-section,footer{background:white;color:var(--text);--muted:#586d6f;--inverse:#586d6f}.trust-section h2,.trust-section h3{color:var(--ink)}}
 </style>
@@ -61,9 +71,9 @@ footer{padding-block:40px}.footer-top{display:flex;align-items:center;justify-co
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="wrap nav">
-<a class="brand" href="#" aria-label="Borough Private Capital home"><span class="mark" aria-hidden="true">b.</span><span class="brand-name">BOROUGH<span>PRIVATE CAPITAL</span></span></a>
-<nav class="desktop-nav" aria-label="Main navigation"><a href="#management">For owners</a><a href="#financing">For brokers</a><a href="#why">Why Borough</a><a href="#markets">Markets</a><a class="btn" href="#contact">Start a conversation</a></nav>
-<details class="mobile-nav" id="mobile-menu"><summary>Menu</summary><nav aria-label="Mobile navigation"><a href="#management">For property owners</a><a href="#financing">For brokers</a><a href="#why">Why Borough</a><a href="#markets">Markets</a><a href="#contact">Start a conversation</a></nav></details>
+<a class="brand" href="/" aria-label="Borough Private Capital home"><span class="mark" aria-hidden="true">b.</span><span class="brand-name">BOROUGH<span>PRIVATE CAPITAL</span></span></a>
+<nav class="desktop-nav" aria-label="Main navigation"><a href="/property-management/">For owners</a><a href="/private-lending/">Lending</a><a href="/brokers/">For brokers</a><a href="#why">Why Borough</a><a href="#markets">Markets</a><a class="btn" href="#contact">Start a conversation</a></nav>
+<details class="mobile-nav" id="mobile-menu"><summary>Menu</summary><nav aria-label="Mobile navigation"><a href="/property-management/">For property owners</a><a href="/private-lending/">Private lending</a><a href="/brokers/">For brokers</a><a href="#why">Why Borough</a><a href="#markets">Markets</a><a href="#contact">Start a conversation</a></nav></details>
 </header>
 <main id="main">
 <div class="wrap">
@@ -72,7 +82,7 @@ footer{padding-block:40px}.footer-top{display:flex;align-items:center;justify-co
 <figure><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&amp;fit=crop&amp;w=720&amp;q=80" width="720" height="960" alt="Architectural detail of a commercial office building" loading="lazy" decoding="async"><figcaption><span>Property operations / Private capital</span><span>Borough</span></figcaption></figure>
 </section>
 <div class="quick-facts" aria-label="Service overview"><div><span>Management markets</span><strong>NYC · Northern NJ</strong></div><div><span>Property types</span><strong>Multifamily · Mixed-use · Commercial</strong></div><div><span>Financing markets</span><strong>NY · NJ · Atlanta</strong></div></div>
-<div class="service-nav audience-paths"><a class="service-link" href="#management"><div><span class="path-label">Property owners</span><strong>I need accountable building management</strong><span>Operations · Tenants · Reporting · Compliance coordination</span></div><span class="arrow" aria-hidden="true">↗</span></a><a class="service-link" href="#financing"><div><span class="path-label">Brokers &amp; investors</span><strong>I need a direct financing conversation</strong><span>Bridge · Fix &amp; flip · Rental property</span></div><span class="arrow" aria-hidden="true">↗</span></a></div>
+<div class="service-nav audience-paths"><a class="service-link" href="/property-management/"><div><span class="path-label">Property owners</span><strong>I need accountable building management</strong><span>Operations · Tenants · Reporting · Compliance coordination</span></div><span class="arrow" aria-hidden="true">↗</span></a><a class="service-link" href="/private-lending/"><div><span class="path-label">Brokers &amp; investors</span><strong>I need a direct financing conversation</strong><span>Bridge · Fix &amp; flip · Rental property</span></div><span class="arrow" aria-hidden="true">↗</span></a></div>
 </div>
 <section class="section soft" id="management">
 <div class="wrap">
@@ -130,7 +140,7 @@ footer{padding-block:40px}.footer-top{display:flex;align-items:center;justify-co
 <div class="resources"><a href="https://www.nyc.gov/site/buildings/property-or-business-owner/property-maintenance.page" target="_blank" rel="noopener noreferrer">NYC building maintenance resources ↗</a><a href="https://www.nj.gov/dca/codes/offices/housinginspection.shtml" target="_blank" rel="noopener noreferrer">NJ housing inspection resources ↗</a></div>
 </div></section>
 </main>
-<div class="mobile-cta"><a href="#contact" class="btn">Start a conversation</a></div><footer><div class="wrap"><div class="footer-top"><a class="brand" href="#"><span class="mark" aria-hidden="true">b.</span><span class="brand-name">BOROUGH<span>PRIVATE CAPITAL</span></span></a><nav aria-label="Footer navigation"><a href="#management">Management</a><a href="#financing">Lending</a><a href="#markets">Service areas</a></nav></div><p class="legal">Property management: New York City and Northern New Jersey. Private financing: NYC, Northern NJ, and metro Atlanta. Services are subject to a written agreement and property-specific review. Financing is business-purpose only and subject to underwriting and availability. This website is not an offer or commitment to lend.</p><div class="footer-wordmark" aria-hidden="true">BOROUGH</div></div></footer>
+<div class="mobile-cta"><a href="#contact" class="btn">Start a conversation</a></div><footer><div class="wrap"><div class="footer-top"><a class="brand" href="/"><span class="mark" aria-hidden="true">b.</span><span class="brand-name">BOROUGH<span>PRIVATE CAPITAL</span></span></a><nav aria-label="Footer navigation"><a href="/property-management/">Management</a><a href="/private-lending/">Lending</a><a href="/brokers/">Brokers</a><a href="#markets">Service areas</a></nav></div><p class="legal">Property management: New York City and Northern New Jersey. Private financing: NYC, Northern NJ, and metro Atlanta. Services are subject to a written agreement and property-specific review. Financing is business-purpose only and subject to underwriting and availability. This website is not an offer or commitment to lend.</p><div class="footer-wordmark" aria-hidden="true">BOROUGH</div></div></footer>
 <script>
 (function(){
 "use strict";
@@ -189,6 +199,16 @@ document.querySelectorAll(".service-list, .faq").forEach(function(group){
  });
 });
 
+var header=document.querySelector(".nav");
+function syncHeader(){header.classList.toggle("scrolled",window.scrollY>12);}
+window.addEventListener("scroll",syncHeader,{passive:true});syncHeader();
+var heroFigure=document.querySelector(".hero figure");
+if(heroFigure&&window.matchMedia("(hover:hover)").matches){
+ heroFigure.addEventListener("pointermove",function(event){var rect=heroFigure.getBoundingClientRect();var x=(event.clientX-rect.left)/rect.width-.5;var y=(event.clientY-rect.top)/rect.height-.5;heroFigure.style.setProperty("--px",x*8+"px");heroFigure.style.setProperty("--py",y*8+"px");});
+ heroFigure.addEventListener("pointerleave",function(){heroFigure.style.setProperty("--px","0px");heroFigure.style.setProperty("--py","0px");});
+}
+var trustSection=document.querySelector(".trust-section");
+if(trustSection){trustSection.addEventListener("pointermove",function(event){var rect=trustSection.getBoundingClientRect();trustSection.style.setProperty("--spot-x",event.clientX-rect.left+"px");trustSection.style.setProperty("--spot-y",event.clientY-rect.top+"px");});}
 form.addEventListener("submit",function(event){
  event.preventDefault();
  if(!form.reportValidity()){return;}
