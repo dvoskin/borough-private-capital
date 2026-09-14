@@ -16,3 +16,8 @@ The page includes paid-acquisition SEO metadata, structured data, broker-focused
 - Type: system UI sans for body copy, labels, and controls; Georgia for `h1`/`h2` only. Font sizes come only from the scale tokens: display, title, heading, lede, body, small, label.
 - Components: `.nav` (full-width sticky header; `.menu` sheet below 1024px), `.hero` + `.media`, `.facts`, `.paths`, `.card` + `.num`, `.checks`, `.accordion`, `.note`, `.callout`, `.cta`, `.form` / `.fields` / `.field`, `.footer`, and `.mobile-cta` (hidden while an element marked `data-cta-end` is on screen).
 - Hero images keep `fetchpriority="high"` and must not use `loading="lazy"` or `decoding="async"`. With `decoding="async"`, Chromium left the hero image unpainted inside `.media` until something forced a repaint.
+
+## Deal ticker
+
+- The ticker on the homepage, Private Lending, and Broker Partners pages currently shows example deals (`data-status="placeholder"`) under the heading "Example Deals We Finance".
+- When real funded deals are available, replace the items in both `.ticker-list` lists (the second copy keeps the loop seamless and is hidden from screen readers), change the heading to "Recently Funded", and set `data-status="live"`. Do not label example deals as funded.

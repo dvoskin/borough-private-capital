@@ -237,6 +237,23 @@ img.badge-mark{width:auto;max-width:112px;height:44px;border-radius:0;background
 body:has(.mobile-cta){padding-bottom:calc(64px + env(safe-area-inset-bottom))}
 @media(min-width:760px){.mobile-cta{display:none}body:has(.mobile-cta){padding-bottom:0}}
 
+/* Funded deals ticker */
+.ticker{margin-top:var(--s5);border-block:1px solid var(--line);background:var(--white)}
+.ticker-head{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);padding-top:12px}
+.ticker-head .kicker{margin:0}
+.ticker-toggle{min-height:32px;padding:4px 12px;border:1px solid var(--line-strong);border-radius:999px;background:var(--white);color:var(--ink);font-size:var(--fs-label);font-weight:600;cursor:pointer}
+.ticker-viewport{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.ticker-track{display:flex;width:max-content;animation:ticker 70s linear infinite}
+.ticker.is-paused .ticker-track{animation-play-state:paused}
+@media(hover:hover){.ticker-viewport:hover .ticker-track{animation-play-state:paused}}
+.ticker-list{display:flex;list-style:none}
+.deal{display:flex;align-items:baseline;gap:10px;padding:12px 24px;border-right:1px solid var(--line);white-space:nowrap}
+.deal-type{font:600 var(--fs-label)/1.4 var(--font-sans);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.deal strong{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+.deal-detail{color:var(--muted);font-size:var(--fs-small)}
+@keyframes ticker{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.ticker-viewport{overflow-x:auto;-webkit-mask-image:none;mask-image:none}.ticker-toggle{display:none}}
+
 /* Motion and print */
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 @media print{.nav,.menu,.mobile-cta,.actions,.footer-links{display:none!important}body{padding-bottom:0!important}.section.dark,.footer{background:#fff;color:var(--text)}.dark h2,.dark h3,.dark p,.dark li{color:var(--ink)}}
