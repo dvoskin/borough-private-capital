@@ -19,5 +19,5 @@ The page includes paid-acquisition SEO metadata, structured data, broker-focused
 
 ## Deal ticker
 
-- The ticker on the homepage, Private Lending, and Broker Partners pages currently shows example deals (`data-status="placeholder"`) under the heading "Example Deals We Finance".
-- When real funded deals are available, replace the items in both `.ticker-list` lists (the second copy keeps the loop seamless and is hidden from screen readers), change the heading to "Recently Funded", and set `data-status="live"`. Do not label example deals as funded.
+- The ticker on the homepage, Private Lending, and Broker Partners pages lists loan types Borough finances by property type and market (`data-status="profiles"`), with no heading and no dollar amounts.
+- When real funded deals are available, replace the items in both `.ticker-list` lists (the second copy keeps the loop seamless and is hidden from screen readers), add amounts, add a visible "Recently Funded" label, and set `data-status="live"`. Never show invented deals or amounts as funded.
