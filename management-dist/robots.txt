@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://borough-property-management.onrender.com/sitemap.xml

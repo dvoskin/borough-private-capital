@@ -8,3 +8,12 @@ services:
     autoDeploy: true
     previews:
       generation: automatic
+  - type: web
+    runtime: static
+    name: borough-property-management
+    plan: free
+    buildCommand: "echo 'Using the committed static build'"
+    staticPublishPath: management-dist
+    autoDeploy: true
+    previews:
+      generation: automatic
