@@ -1,5 +1,12 @@
 # Render deployment
 
+## Two sites
+
+- `render-dist/` is Borough Private Capital (private lending and broker partners): Render static site `borough-private-capital`, https://borough-private-capital.onrender.com
+- `management-dist/` is Borough Property Management: Render static site `borough-property-management`, https://borough-property-management.onrender.com
+- The sites do not link to each other. `render-dist/property-management/` only forwards old links to the management site's Services page.
+- Both folders use the same design system; keep `assets/site.css` identical in both.
+
 This repository contains the optimized, mobile-first Borough Private Capital landing page. Render serves `render-dist` from the `main` branch through its global CDN.
 
 Render settings:
