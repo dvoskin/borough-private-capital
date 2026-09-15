@@ -1,10 +1,25 @@
+# Preview branch only: two noindex preview sites built from preview/two-sites.
+# Production (main) keeps its own render.yaml.
 services:
   - type: web
     runtime: static
-    name: borough-private-capital
-    plan: free
-    buildCommand: "echo 'Using the committed optimized static build'"
+    name: borough-private-capital-preview
+    branch: preview/two-sites
+    buildCommand: "echo 'Using the committed static build'"
     staticPublishPath: render-dist
     autoDeploy: true
-    previews:
-      generation: automatic
+    headers:
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex
+  - type: web
+    runtime: static
+    name: borough-property-management-preview
+    branch: preview/two-sites
+    buildCommand: "echo 'Using the committed static build'"
+    staticPublishPath: management-dist
+    autoDeploy: true
+    headers:
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex
