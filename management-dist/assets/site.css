@@ -310,4 +310,4 @@ body:has(.mobile-cta){padding-bottom:calc(64px + env(safe-area-inset-bottom))}
 
 .card .tags{margin-top:var(--s3);gap:6px}
 .card .tags li{min-height:26px;padding:2px 10px;font-size:var(--fs-label)}
-@media(max-width:959px){.thumb-card>.tags{grid-column:2}}
+@media(max-width:959px){.thumb-card>.tags{grid-column:1 / -1;margin-top:var(--s3)}}
