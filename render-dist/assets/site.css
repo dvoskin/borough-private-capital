@@ -355,3 +355,6 @@ body:has(.mobile-cta){padding-bottom:calc(64px + env(safe-area-inset-bottom))}
 .plans{margin-top:var(--s7)}
 .plans .panel>p:first-child{margin-bottom:var(--s4)}
 .guide-links .path strong{font-size:var(--fs-body)}
+
+/* Guide links */
+.accordion .panel>*+p{margin-top:var(--s3)}
